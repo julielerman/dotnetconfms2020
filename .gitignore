@@ -323,3 +323,4 @@ ASALocalRun/
 data/obj/Debug/netstandard2.0/data.csproj.CoreCompileInputs.cache
 data/obj/Debug/netstandard2.0/data.AssemblyInfo.cs
 data/obj/
+/.ionide
