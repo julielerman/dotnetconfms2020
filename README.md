@@ -13,3 +13,8 @@ DotNet Conference: [https://focus.dotnetconf.net/](https://focus.dotnetconf.net/
 - Domain Modeling Made Functional by Scott Wlaschin: [Amazon](https://www.amazon.com/Domain-Modeling-Made-Functional-Domain-Driven/dp/1680502549), [O'Reilly](https://www.oreilly.com/library/view/domain-modeling-made/9781680505481/)
 - Implementing Domain-Driven Design by Vaughn Vernon: [Amazon](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577), [O'Reilly](https://www.oreilly.com/library/view/implementing-domain-driven-design/9780133039900/)
 
+
+Domain-Driven Design (DDD) provides much of the strategic design guidance that we can use to determine the boundaries around and interactions between Microservices in our solutions. DDD also follows up with tactical design patterns for your business logic. In this session we’ll take a look at some of these patterns and how EF Core naturally, or with some additional configuration, persists the data that your microservices depend on.
+
+My session is the first 1/2 hour of this YouTube video that also includes the sessions after with James Newton-King, Jessica Dean, LaBrina Loving, Elton Stoneman and Carey Payette. www.youtube.com/watch?v=J9oJTKwASjA
+
