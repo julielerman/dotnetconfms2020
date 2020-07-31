@@ -1,6 +1,7 @@
 # The Intersection of Microservices, Domain-Driven Design, &amp; EF Core (Demo from July 30 2020 DotNet Conference)
 
 Session: [https://www.twitch.tv/videos/695269074?t=5h45m58s](https://www.twitch.tv/videos/695269074?t=5h45m58s)
+
 DotNet Conference: [https://focus.dotnetconf.net/](https://focus.dotnetconf.net/)
 
 ## Books mentioned the session
