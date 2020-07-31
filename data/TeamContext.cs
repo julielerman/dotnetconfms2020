@@ -29,7 +29,7 @@ namespace Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlite("Data Source=d:\\data\\TeamData.db")
+                optionsBuilder.UseSqlite("Data Source=TeamData.db")
                               .UseLoggerFactory(ConsoleLoggerFactory)
                               .EnableSensitiveDataLogging();
             }
