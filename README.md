@@ -8,6 +8,10 @@ DotNet Conference: [https://focus.dotnetconf.net/](https://focus.dotnetconf.net/
 
 Domain-Driven Design Fundamentals Course by Julie and Steve Smith on [Pluralsight] (http://bit.ly/2tbdpgn)
 
+Getting Started with Entity Framework Core by me on [Pluralsight](http://bit.ly/EFCore31)
+
+[EF Core Documentation](https://docs.microsoft.com/en-us/ef/core/)
+
 ## Books mentioned the session
 
 - Domain-Driven Design: Tackling Complexity in the Heart of Software by Eric Evans: [Amazon](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215), [O'Reilly](https://www.oreilly.com/library/view/domain-driven-design-tackling/0321125215/), [Google Books](https://books.google.com/books?id=hHBf4YxMnWMC&dq=domain+driven+design)
