@@ -1,15 +1,19 @@
-using System;
 using SharedKernel;
+using System;
 
 public class Player
 {
-  private Player(){}
+  private Player()
+  {
+  }
+
   public Player(string firstname, string lastname)
   {
-      NameFactory=PersonFullName.Create(firstname,lastname);
-      Id=Guid.NewGuid();
+    NameFactory = PersonFullName.Create(firstname, lastname);
+    Id = Guid.NewGuid();
   }
+
   public Guid Id { get; private set; }
-  public PersonFullName NameFactory { get;  set; }
-  public string Name=>NameFactory.FullName;
+  public PersonFullName NameFactory { get; set; }
+  public string Name => NameFactory.FullName;
 }

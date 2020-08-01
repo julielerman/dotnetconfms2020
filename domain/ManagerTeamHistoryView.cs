@@ -1,6 +1,4 @@
-﻿
-
-namespace domain
+﻿namespace domain
 {
   public class ManagerTeamHistoryView
   {

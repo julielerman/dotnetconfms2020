@@ -2,26 +2,27 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-
-namespace SharedKernel {
-  public class UniformColors {
-   
-     public UniformColors (Color primary, Color secondary) {
+namespace SharedKernel
+{
+  public class UniformColors
+  {
+    public UniformColors(Color primary, Color secondary)
+    {
       Primary = primary;
       Secondary = secondary;
-     
     }
+
     public Color Primary { get; private set; }
     public Color Secondary { get; private set; }
-   
-    public UniformColors RevisedColors (Color primary, Color secondary) {
-      var newUniformColors = new UniformColors (
+
+    public UniformColors RevisedColors(Color primary, Color secondary)
+    {
+      var newUniformColors = new UniformColors(
         (primary != null) ? primary : Primary,
         (secondary != null) ? secondary : Secondary
       );
       return newUniformColors;
     }
-
 
     public override bool Equals(object obj)
     {

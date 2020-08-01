@@ -1,26 +1,24 @@
-using System;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
 using Data;
 using Domain;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing;
+using System.Linq;
+using System.Reflection;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace test {
-    public class EFCoreInMemoryTests {
-
+namespace test
+{
+  public class EFCoreInMemoryTests
+  {
     private readonly ITestOutputHelper _output;
-
 
     public EFCoreInMemoryTests(ITestOutputHelper output)
     { _output = output; }
+
     private static Team TeamAjax => new Team("AFC Ajax", "The Lancers", "1900", "Amsterdam Arena");
 
-
-
-    [Fact,Trait("", "Hidden properties")]
+    [Fact, Trait("", "Hidden properties")]
     public void CanStoreAndMaterializeImmutableTeamNameFromDataStore()
     {
       var team = TeamAjax;
@@ -37,9 +35,7 @@ namespace test {
       }
     }
 
-   
-   
-    [Fact,Trait("", "Protected collection")]
+    [Fact, Trait("", "Protected collection")]
     public void CanStoreAndRetrieveTeamPlayers()
     {
       var team = TeamAjax;
@@ -139,11 +135,9 @@ namespace test {
         Assert.Equal(new { M1 = "Marcel Keizer", M1Count = 1, M2 = "Erik ten Hag", M2Count = 0 },
             new { M1 = M1.Name, M1Count = M1.PastTeams.Count, M2 = M2.Name, M2Count = M2.PastTeams.Count });
       }
-
     }
 
-    
-    [Fact,Trait("", "Rich behavior, protected 1:1")]
+    [Fact, Trait("", "Rich behavior, protected 1:1")]
     public void CanStoreAndRetrieveTeamManager()
     {
       var team = TeamAjax;
@@ -165,6 +159,7 @@ namespace test {
         Assert.Equal(privateId.GetValue(storedTeam), storedManager.CurrentTeamId);
       }
     }
+
     [Fact, Trait("", "Value conversions")]
     public void CanStoreAndRetrieveHomeColors()
     {

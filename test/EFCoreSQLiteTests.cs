@@ -1,10 +1,8 @@
-using System;
-using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
 using Data;
 using Domain;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing;
+using System.Linq;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -14,7 +12,6 @@ namespace test
   {
     private static Team TeamAjax => new Team("AFC Ajax", "The Lancers", "1900", "Amsterdam Arena");
     private readonly ITestOutputHelper output;
-
 
     public EFCoreSQLiteTests(ITestOutputHelper output)
     {
@@ -47,7 +44,7 @@ namespace test
       }
     }
 
-    [Fact, Trait("","Hidden 1:1 and also the *:*")]
+    [Fact, Trait("", "Hidden 1:1 and also the *:*")]
     public void CanStoreAndRetrieveManagerTeamHistory()
     {
       var team = TeamAjax;
@@ -59,7 +56,6 @@ namespace test
       {
         context.AddRange(team, firstmanager);
         context.SaveChanges();
-
       }
       using (var context = new TeamContext())
       {
@@ -68,9 +64,9 @@ namespace test
         Assert.Equal(new { M1 = "Marcel Keizer", M1Count = 1, M2 = "Erik ten Hag", M2Count = 0 },
             new { M1 = M1.Name, M1Count = M1.PastTeams.Count, M2 = M2.Name, M2Count = M2.PastTeams.Count });
       }
-
     }
-    [Fact,Trait("", "Hidden properties")]
+
+    [Fact, Trait("", "Hidden properties")]
     public void CanStoreAndMaterializeImmutableTeamNameFromDataStore()
     {
       var team = TeamAjax;
@@ -96,9 +92,9 @@ namespace test
       var teamdotNet = new Team("dotNet", "The Nerds", "2002", "MS Campus");
       teamdotNet.ChangeManagement(firstmanager);
       teamdotNet.ChangeManagement(new Manager("David", "Fowler"));
-        using (var context = new TeamContext())
+      using (var context = new TeamContext())
       {
-        context.AddRange(team, teamdotNet,firstmanager);
+        context.AddRange(team, teamdotNet, firstmanager);
         context.SaveChanges();
       }
 
@@ -113,8 +109,6 @@ namespace test
         }
         Assert.Equal(4, counter);
       }
-
-
     }
   }
 }

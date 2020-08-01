@@ -1,22 +1,32 @@
-
 using System;
 using System.Collections.Generic;
 
-namespace SharedKernel {
-  public class PersonFullName {
-
-    public static PersonFullName Create (string first, string last) {
-      return new PersonFullName (first, last);
+namespace SharedKernel
+{
+  public class PersonFullName
+  {
+    public static PersonFullName Create(string first, string last)
+    {
+      return new PersonFullName(first, last);
     }
-    public static PersonFullName Empty () {
-      return new PersonFullName (null, null);
-    }
-    private PersonFullName () { }
 
-    public bool IsEmpty () {
-      if (string.IsNullOrEmpty (First) && string.IsNullOrEmpty (Last)) {
+    public static PersonFullName Empty()
+    {
+      return new PersonFullName(null, null);
+    }
+
+    private PersonFullName()
+    {
+    }
+
+    public bool IsEmpty()
+    {
+      if (string.IsNullOrEmpty(First) && string.IsNullOrEmpty(Last))
+      {
         return true;
-      } else {
+      }
+      else
+      {
         return false;
       }
     }
@@ -34,14 +44,15 @@ namespace SharedKernel {
       return HashCode.Combine(base.GetHashCode(), First, Last);
     }
 
-    private PersonFullName (string first, string last) {
+    private PersonFullName(string first, string last)
+    {
       First = first;
       Last = last;
     }
 
     public string First { get; private set; }
     public string Last { get; private set; }
-    public string FullName  => First + " " + Last;
+    public string FullName => First + " " + Last;
 
     public static bool operator ==(PersonFullName left, PersonFullName right)
     {

@@ -8,7 +8,10 @@ namespace Domain
 {
   public class Team
   {
-    private Team(){  }
+    private Team()
+    {
+    }
+
     public Team(string teamName, string nickname, string yearFounded, string homeStadium)
     {
       _teamname = teamName;
@@ -32,7 +35,9 @@ namespace Domain
     // EF Core recognizes IEnumerable, but as of EFC3,  backing field is default for read/write anyway
     //Players property is a "defensive copy", users can't modify the field
     public IEnumerable<Player> Players => _players.ToList();
+
     private ICollection<Player> _players;  // we can manipulate the ICollection locally
+
     public bool AddPlayer(string firstName, string lastname, out string response)
     {
       if (_players == null)
@@ -55,9 +60,10 @@ namespace Domain
         return false;
       }
     }
-   
+
     private Manager _manager;
-    public string ManagerName => _manager.Name; 
+    public string ManagerName => _manager.Name;
+
     public void ChangeManagement(Manager newManager)
     {
       if (_manager is null || _manager.Name != newManager.Name)
@@ -69,6 +75,7 @@ namespace Domain
     }
 
     public UniformColors HomeColors { get; private set; }
+
     public void SpecifyHomeUniformColors(Color primary, Color secondary)
     {
       //would be interesting in another aggregate in this same bounded context
