@@ -2,7 +2,7 @@
 
 Session Abstract: Domain-Driven Design (DDD) provides much of the strategic design guidance that we can use to determine the boundaries around and interactions between Microservices in our solutions. DDD also follows up with tactical design patterns for your business logic. In this session we’ll take a look at some of these patterns and how EF Core naturally, or with some additional configuration, persists the data that your microservices depend on.
 
-My session is the first 1/2 hour of this YouTube video that also includes the sessions after with James Newton-King, Jessica Dean, LaBrina Loving, Elton Stoneman and Carey Payette. www.youtube.com/watch?v=J9oJTKwASjA
+My session is the 1/2 hour [YouTube video](https://youtu.be/DG8Qe7TJiIE) that is part of [.NET Conf: Focus on Microservices playlist](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oUc2ShrReCS7KoBbPEONE0p). Playlist also includes sessions with [James Newton-King](https://youtu.be/HVq4TstHCEs), [Jessica Dean](https://youtu.be/5BkKjTxIokU), [LaBrina Loving](https://youtu.be/YLMsAMvY4KA), [Elton Stoneman](https://youtu.be/Wbjh4T-cdv8) and [Carey Payette](https://youtu.be/UT_Fd-Pkiuw).
 
 DotNet Conference: [https://focus.dotnetconf.net/](https://focus.dotnetconf.net/)
 
